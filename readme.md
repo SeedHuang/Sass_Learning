@@ -6,6 +6,10 @@
 那接下来我来对一VW和REM做一下解释，很简单的
 
 ## rem
+
+**rem的兼容性**
+![rem兼容性](./docImages/rem.png)
+
 先说一rem，也是一种相对尺寸，em是相对于父节点的，rem是相对于根结点的。em计算起来太麻烦，而rem因为参照物就只有一个，所以相对简单，据一个例子吧：
 
 ```
@@ -61,6 +65,9 @@ html {
 
 ## vw
 vw相对于rem就简单了许多，全写就是viewport width,是按照viewport宽度等比缩放的
+
+**vw的兼容性**
+![vw兼容性](./docImages/vw.png)
 
 **与px的换算**
 `1vw = 1px/ viewport width`
