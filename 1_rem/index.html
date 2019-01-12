@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-width=1.0,user-scalable=no,minimal-ui"/>
+</head>
+<script>
+
+  const standWidth = 320;
+
+  function setRootFontSize () {
+    const fector = document.documentElement.clientWidth / standWidth;
+    console.log(fector)
+    document.documentElement.style.fontSize = 16 * fector + 'px';
+  }
+
+  window.onresize = setRootFontSize;
+
+  setRootFontSize();
+
+</script>
+<body>
+  <div id="container">
+    <div class="nav">
+      <div class="nav__item nav__item--selected">First</div>
+      <div class="nav__item">Second</div>
+      <div class="nav__item">Third</div>
+    </div>
+    <article class="article">
+      <div class="article__item article__item--selected">
+        This is first page
+      </div>
+      <div class="article__item">
+        This is second page
+      </div>
+      <div class="article__item">
+        This is third page
+      </div>
+    </article>
+  </div>
+</body>
+</html>

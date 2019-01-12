@@ -1,0 +1,47 @@
+@function setSize($width, $factor:320) {
+  @return ($width / $factor * 100) + vw;
+}
+
+@mixin borderBottom333 {
+  border-bottom: 1px solid #333;
+}
+
+@mixin borderBottomBlue {
+  border-bottom: 1px solid blue;
+}
+html,body{
+  padding: 0;
+  margin: 0;
+}
+#container {
+  .nav {
+    height: setSize(30);
+    @include borderBottom333;
+    &__item {
+      width: setSize(70);
+      height: setSize(30);
+      line-height: setSize(30);
+      color: #333;
+      text-indent: setSize(4);
+      float: left;
+      font-size: setSize(12);
+      &--selected {
+        background: #333;
+        color: #fff;
+      }
+    }
+  }
+
+  .article__item {
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    height: setSize(100);
+    width: setSize(300);
+    display: none;
+    margin: setSize(10);
+    font-size: setSize(12);
+  }
+  .article__item--selected{
+    display: block;
+  }
+}
